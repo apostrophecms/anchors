@@ -5,6 +5,12 @@ module.exports = {
   bundle: {
     directory: 'modules',
     modules: getBundleModuleNames()
+  },
+  options: {
+    i18n: {
+      ns: 'aposAnchors',
+      browser: true
+    }
   }
 };
 
