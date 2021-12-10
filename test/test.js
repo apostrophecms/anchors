@@ -37,7 +37,7 @@ describe('Anchors Wrapper', function () {
         },
         '@apostrophecms/image-widget': {
           options: {
-            anchorsAttribute: 'data-anchor'
+            anchorAttribute: 'data-anchor'
           }
         }
       }
@@ -79,19 +79,4 @@ describe('Anchors Wrapper', function () {
 
     assert(output.indexOf('test-three') === -1);
   });
-
-  // const homeFields = {
-  //   add: {
-  //     body: {
-  //       type: 'area',
-  //       options: {
-  //         widgets: {
-  //           '@apostrophecms/rich-text': {},
-  //           '@apostrophecms/image': {},
-  //           '@apostrophecms/video': {}
-  //         }
-  //       }
-  //     }
-  //   }
-  // };
 });

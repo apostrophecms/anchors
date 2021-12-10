@@ -25,7 +25,7 @@ module.exports = {
 
         if (widget.anchorId && self.options.anchors !== false) {
           // Apply a wrapper div with the anchor attribute.
-          const attr = self.options.anchorsAttribute || 'id';
+          const attr = self.options.anchorAttribute || 'id';
           const opener = `<div ${attr}=${widget.anchorId}>`;
 
           return opener + rendered + '</div>';
