@@ -1,3 +1,5 @@
 # Changelog
 
-## 1.0.0
+## Unreleased
+
+* Initial module release supporting widget wrapping for anchor linking.
