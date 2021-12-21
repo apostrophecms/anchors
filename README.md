@@ -38,13 +38,7 @@ Configure the anchor modules in the `app.js` file:
 require('apostrophe')({
   shortName: 'my-project',
   modules: {
-    // The root bundle module
     '@apostrophecms/anchors': {},
-    // The widget type improving module
-    '@apostrophecms/anchors-widget-type': {},
-    // An improving module for the rich text widget type. This disables the
-    // wrapping feature for rich text widgets.
-    '@apostrophecms/anchors-rich-text-widget': {}
   }
 });
 ```
