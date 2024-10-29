@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+
+* Adds AI-generated missing translations
+
 ## 1.0.0 - 2023-01-16
 
 * Declared stable. No code changes. Minor doc improvements.
