@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 (2025-08-06)
+
+* README updates.
+* Test with supported Node.js and MongoDB versions.
+
 ## 1.0.1 (2024-10-31)
 
 * Adds AI-generated and community reviewed missing translations
