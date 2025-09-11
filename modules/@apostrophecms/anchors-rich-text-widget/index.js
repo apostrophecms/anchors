@@ -12,6 +12,6 @@ module.exports = {
           anchorDefault: self.options.anchorDefault
         };
       }
-    }
+    };
   }
 };

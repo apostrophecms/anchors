@@ -24,9 +24,9 @@ module.exports = {
           anchorAttribute: self.options.anchorAttribute,
           anchors: self.options.anchors,
           anchorDefault: self.options.anchorDefault
-        }
+        };
       }
-    }
+    };
   },
   extendMethods(self) {
     return {
