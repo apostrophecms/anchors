@@ -12,11 +12,21 @@ module.exports = {
           label: 'aposAnchors:anchorId',
           help: 'aposAnchors:anchorIdHelp',
           following: options.anchorDefault,
-          def: '',
           last: true // TODO: Confirm we're merging this feature.
         }
       }
     };
+  },
+  methods(self) {
+    return {
+      async annotateWidgetForExternalFront() {
+        return {
+          anchorAttribute: self.options.anchorAttribute,
+          anchors: self.options.anchors,
+          anchorDefault: self.options.anchorDefault
+        }
+      }
+    }
   },
   extendMethods(self) {
     return {
