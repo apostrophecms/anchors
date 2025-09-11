@@ -127,59 +127,6 @@ export default {
 
 **Campaign Pages**: Enable marketing campaigns to link directly to specific product features or testimonials.
 
-## Usage with Astro (Headless)
-
-> **⚠️ Current Limitation**: The configuration options described above (like `anchorAttribute`, `anchors: false`, and `anchorDefault`) are not currently passed through to headless frontends like Astro. These options only work in traditional ApostropheCMS projects. We're working on improving this integration.
-
-When using ApostropheCMS as a headless CMS with an Astro frontend, you can still implement anchor functionality by manually handling the anchor data in your Astro components. You can also pass options to individual widgets on a per-area basis, but you will have to alter the code examples below to handle these options.
-
-### Step 1: Create the WidgetWrapper Component
-
-In your Astro frontend, create `components/WidgetWrapper.astro` with the following content:
-
-```javascript
----
-const { widget } = Astro.props;
-
-const hasAnchor = widget?.anchorId;
----
-
-{
-  hasAnchor ? (
-    <div id={widget.anchorId}>
-      <slot />
-    </div>
-  ) : (
-    <slot />
-  )
-}
-```
-
-### Step 2: Wrap Your Widget Components
-
-Then go to your widget components (e.g., `widgets/ImageWidget.astro`) and wrap their existing content with the WidgetWrapper:
-
-```javascript
-// Before
----
-<Figure {image} {link} caption={widget.caption} {style} />
-```
-
-```javascript
-// After
----
-import WidgetWrapper from '../components/WidgetWrapper.astro';
----
-<WidgetWrapper {widget}>
-  <Figure {image} {link} caption={widget.caption} {style} />
-</WidgetWrapper>
-```
-
-**Benefits of this approach:**
-- No overhead when widgets don't contain anchor data (no artificial wrappers)
-- You can add additional project-specific functionality and options to `WidgetWrapper.astro`
-- Minimizes boilerplate code and provides a single source of truth for common widget logic
-
 ### Getting Started with Astro + ApostropheCMS
 
 New to using ApostropheCMS with Astro? Check out our starter kits:
