@@ -1,8 +1,14 @@
 # Changelog
 
 ## UNRELEASED
+
 * Adds new `annotateWidgetForExternalFront()` method to both modules. This allows for options to be passed through to external frontends like Astro.
 * Fixes the `anchorId` field of the `anchors-widget-type` module so that it follows the field passed in the `anchorDefault` option.
+
+## 1.0.2 (2025-08-06)
+
+* README updates.
+* Test with supported Node.js and MongoDB versions.
 
 ## 1.0.1 (2024-10-31)
 
