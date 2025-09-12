@@ -17,17 +17,6 @@ module.exports = {
       }
     };
   },
-  methods(self) {
-    return {
-      async annotateWidgetForExternalFront() {
-        return {
-          anchorAttribute: self.options.anchorAttribute,
-          anchors: self.options.anchors,
-          anchorDefault: self.options.anchorDefault
-        };
-      }
-    };
-  },
   extendMethods(self) {
     return {
       async output(_super, req, widget, options, _with) {
@@ -42,6 +31,14 @@ module.exports = {
         } else {
           return rendered;
         }
+      },
+      annotateWidgetForExternalFront(_super) {
+        return {
+          ..._super,
+          anchorAttribute: self.options.anchorAttribute,
+          anchors: self.options.anchors,
+          anchorDefault: self.options.anchorDefault
+        };
       }
     };
   }

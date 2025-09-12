@@ -3,10 +3,11 @@ module.exports = {
   options: {
     anchors: false
   },
-  methods(self) {
+  extendMethods(self) {
     return {
-      async annotateWidgetForExternalFront() {
+      annotateWidgetForExternalFront(_super) {
         return {
+          ..._super(),
           anchorAttribute: self.options.anchorAttribute,
           anchors: self.options.anchors,
           anchorDefault: self.options.anchorDefault
